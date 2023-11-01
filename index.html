@@ -1,0 +1,330 @@
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+		.shadowbox {
+    		width: 15em;
+    		border: 1px solid #333;
+    		box-shadow: 8px 8px 5px #444;
+    		padding: 8px 12px;
+    		background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    }
+		#mTitle{
+			background:url() repeat-x;
+			height:28px;
+			border-bottom:1px solid #ccc;
+		}
+		body{
+			background-color:chocolate;
+		}
+		a{
+			text-decoration:none;
+			padding-left:12px;
+		}
+		#mWeather{
+			background-color:bisque;
+			line-height:23px;
+			font-size:16px;
+		}
+		#mWeather p{
+			background:url() no-repeat;
+			background-size:200px 41px;
+			line-height:40px;
+			font-size:25px;
+			padding-left:65px;
+			margin:0px;
+		}
+		.mTui{
+			background-color:bisque;
+			text-align:center;
+		}
+		.mBg{
+			background:url() repeat-x;
+		}
+		.mIcon{
+			background:url() no-repeat left bottom;
+			padding-left:10px;
+			font-size:20px;
+		}
+		.mImg{
+			padding-left:11px;
+		}
+		#mLine{
+			line-height:25px;
+		}
+		ul{
+			list-style:none;
+			padding:0px;
+			margin:0px;
+			background-color:burlywood;
+		}
+		ul li{
+			padding-left:10px;
+			line-height:26px;
+			border-bottom:1px dashed;
+		}
+		#mBottom{
+			background-color:bisque;
+			text-align:center;
+			border-top:1px solid #A56AFF;
+		}
+		#mBottom span{
+			color:white;
+			
+		}
+		#mCenter{
+			border-left:1px solid #A56AFF;
+			width:410px;
+		}
+		#mRight{
+			border-left:1px solid #A56AFF;
+			width:150px;
+		}
+		#place{
+			float:none;
+			color:burlywood;
+		}
+		.bg{
+		    background: #000; 
+		    width: 1000px;
+		    height: 100px; 
+		    margin: 0 auto;
+		    padding-top: 100px; 
+		}
+		.shine{
+		    width: 1000px;
+		    font-family: "Microsoft YaHei";
+		    font-size: 60px;
+		    text-align: center;
+		    background: -webkit-linear-gradient(left, #0f0, #00f) 0 0 no-repeat;
+		    -webkit-background-size: 160px;                        
+		    -webkit-background-clip: text;                            
+		    -webkit-text-fill-color: rgba(255, 255, 255, 0.3);        
+		    -webkit-animation: shine 3s infinite;                    
+		}
+		@-webkit-keyframes shine{   /*创建动画*/
+		    0%{
+		        background-position: 0 0;
+		    }
+		    100%{
+		        background-position: 100% 100%;
+		    }
+		}
+/* 跳动 */
+		h1{
+		   font: 96px "微软雅黑"; 
+		   margin:50px auto; 
+		   font-weight: 500; 
+		   text-align: center;
+		   color:darkorange; 
+		   -webkit-animation:bounce 2s infinite;
+		}
+		@-webkit-keyframes bounce{/*创建动画*/
+		   0%,100%,20%,50%,80%{
+		      -webkit-transform:translateY(0);
+		   }40%{
+		      -webkit-transform:translateY(-30px);
+		   }60%{
+		      -webkit-transform:translateY(-15px);
+		   }
+		}
+		.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+img {
+    width:auto;
+    /* height: auto; */
+    transform: scale(1);
+    transition: transform 1s ease 0s;
+}
+
+img:hover {
+    transform: scale(1.07);
+}
+
+@keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* 设置 body 的初始样式 */
+      body {
+        opacity: 1;
+      }
+      
+      /* 将动画应用到 body 元素上 */
+      body.loaded {
+        animation-name: slideIn;
+        animation-duration: 3s;
+      }
+    </style>
+    <script>
+      // 使用 JavaScript 将 loaded 类名添加到 body 元素上
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector("body").classList.add("loaded");
+      });
+    </script>
+	</style>
+ </head>
+ <body>
+	<table align="center" bgcolor="white"> 
+		<tr><td colspan="3"><h1 class="shadowbox">欢迎来到胡锦波和周亚平的猫咪基地</h1></tr>
+		<tr><td colspan="3" id="mTitle">
+			<div class="dropdown">
+				<span><a href="#">首页</a></span>
+				<div class="dropdown-content">
+				<a href="#perform">鉴赏大赛</a></br>
+				<a href="#home">猫咪的窝</a></br>
+				<a href="#map">猫咪地图</a></br>
+				<a href="#popular">今日猫咪人气榜</a>
+				</div>
+			  </div>
+			  <div class="dropdown">
+				<span><a href="#">走进猫咪</a></span>
+				<div class="dropdown-content">
+				<p>猫咪为什么喜欢磨爪子</p>
+				<p>猫咪吃什么</p>
+				<p>猫咪什么时候睡觉</p>
+				</div>
+			  </div>
+			  <div class="dropdown">
+				<span><a href="#">猫咪概况</a></span>
+				<div class="dropdown-content">
+				<p>猫咪保护</p>
+				<p>猫咪基地</p>
+				<p>爱猫人士</p>
+				</div>
+			  </div>
+			  <div class="dropdown">
+				<span><a href="#">领养选择</a></span>
+				<div class="dropdown-content">
+				<p>注意事项</p>
+				<p>怎么联系我们</p>
+				<p>领取免费猫牌</p>
+				</div>
+			  </div>
+			  <div class="dropdown">
+				<span><a href="#">流浪猫保护</a></span>
+				<div class="dropdown-content">
+				<p>我要捐款</p>
+				<p>我要做志愿者</p>
+				</div>
+			  </div>
+				<a href="#">网站特色</a>
+				<a href="#">猫咪游记</a>
+				<a href="#">付款方式</a>
+				<a href="#">给我留言</a>
+				</td>
+		</tr>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td id="mWeather">
+							<p id="place">猫咪最喜欢的天气</p>
+							澳大利亚 5℃-12℃<br/>
+							英国 阵雨转多云10℃-18℃<br/>
+							吐鲁番 多云转阴20℃-28℃<br/>
+							东京 阵雨转阴21℃-28℃<br/>
+							北京 雷阵雨0℃-7℃
+						</td>
+					</tr>
+					<tr class="mBg" id="popular"><td class="mIcon">今日人气榜</td></tr>
+					<tr class="mTui">
+						<td><img src="https://tica.org/images/Breeds/American_Bobtail/American-Bobtail-Full-Body_.jpg"><br/>American Bobtail</td>
+					</tr>
+					<tr class="mTui">
+						<td><img src="https://tica.org/images/Breeds/Birman/Birman-Full-Body.jpg"><br/>Birman Breed</td>
+						</tr>
+					<tr class="mTui">
+						<td><img src="https://tica.org/images/Breeds/Cymric/Cymric-Full-Body.jpg"><br/>Cymric Breed</td>
+					</tr>
+				</table>
+			</td>
+						
+			<td id="mCenter" >
+				<table align="center">
+					<tr><td><img src="https://img.doooor.com/img/forum/202102/07/185308jcqg8zhm5z579044.jpg" height="50"></td></tr>
+					<tr><td><img src="https://ts1.cn.mm.bing.net/th/id/R-C.7f81ec56023624f90b770781b1559859?rik=yObY7RAacZLWUg&riu=http%3a%2f%2fwww.dawangmao.com%2fwp-content%2fuploads%2f2019%2f06%2f1560579184-WD80OVLlF3cAhs0-gY2hxt6DvZ8WnptlRN84FUTfOBU.jpg&ehk=wx%2fZz9nLUBtZ4NL5tMHFAMZeCEAJ4HeX2lxJ9IuquWY%3d&risl=&pid=ImgRaw&r=0" height="200"></td></tr>
+					<tr><td>
+							<img class="mImg" src="https://ts1.cn.mm.bing.net/th/id/R-C.6981de448709de6a70ec0d24f9fed2dc?rik=qN5eXMyWo%2fqTfQ&riu=http%3a%2f%2fn.sinaimg.cn%2ftranslate%2f368%2fw584h584%2f20190911%2fc222-iekuaqu1611011.jpg&ehk=eeYnlrrym2MTnhrQHqQaMuuxpBflMqeg2Z42y%2f8A0ns%3d&risl=&pid=ImgRaw&r=0" height="60" >
+							<img class="mImg" src="https://ts1.cn.mm.bing.net/th/id/R-C.d2111b4e1e74bd6013d9800417e7402d?rik=03fQ2Ujoqvo9HQ&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fwallpaper%2f1402%2f27%2fc1%2f31619094_1393484581616.jpg&ehk=Vtx9eTIw%2bjScuAr%2fVd7RsMQuos%2bB7pzF7DQIBmNOtQU%3d&risl=&pid=ImgRaw&r=0" height="60">
+							<img class="mImg" src="https://ts1.cn.mm.bing.net/th/id/R-C.8d66fbbf032bef965adad18c8211bc74?rik=n75wA8jtGeE4SA&riu=http%3a%2f%2fe.hiphotos.baidu.com%2fzhidao%2fpic%2fitem%2fb3b7d0a20cf431ad2f4ffbcc4a36acaf2fdd98a2.jpg&ehk=i9w0sSHO2ra44SdPjdaEDGAGQoEIkaXIhyGY%2fIXyhFI%3d&risl=&pid=ImgRaw&r=0" height="60">
+						</td>
+					</tr>
+					<tr class="bg"><td class="shine">猫与人早有羁绊</td></tr>
+					<tr><td id="mLine">
+							<img src="https://pica.zhimg.com/v2-833204769c490336985a344356199fa4_r.jpg?source=1940ef5c" height="150"> 古埃及文化中出现了猫的身影。在遥远的古埃及时代，猫便已经和人类生活在一起，很多埃及文化中也出现了猫的身影。<br/>
+							<img src="https://pic1.zhimg.com/80/v2-33e43821fbd93e92a44d53603213c41b_720w.webp?source=1940ef5c" height="150">  古埃及众神中，以猫的形象出现的神，便有巴斯苔特，即埃及猫神<br/>
+							<img src="https://picx.zhimg.com/80/v2-57ad3d9714b5e2b3e61c4d7e0c19415e_720w.webp?source=1940ef5c" height="150">  《捉贼记》希区柯克和他的黑猫<br/>
+							<img src="https://pica.zhimg.com/80/v2-dee0bf718dc79df94dedd35d31730482_720w.webp?source=1940ef5c" height="150">  《爱丽丝漫游奇境记》迷上柴郡猫<br/>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td id="mRight">
+				<table>
+					<tr class="mBg" id="map"><td class="mIcon">猫咪地图</td></tr>
+					<tr><td><img src="https://ts1.cn.mm.bing.net/th/id/R-C.ae48286e2aaea7e78de2383b09a80658?rik=JRleHpN1TIqpdA&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20190823%2f3926fc8bf20f496badbb48644fd0b2dd.jpeg&ehk=hET3eDEzNeGFDbS1ara40WkZetV1qbUmz9%2f1ugKQOfc%3d&risl=&pid=ImgRaw&r=0"></td></tr>
+					<tr><td><img src="https://ts1.cn.mm.bing.net/th/id/R-C.e147ba6916c88fb955cf8d6a177477b9?rik=93PLVgEZvcLgWw&riu=http%3a%2f%2fwww.sinogene.com.cn%2fueditor%2fphp%2fupload%2fimage%2f20200320%2f1584674340793807.jpg&ehk=LXU46DKUhSijAP%2bbeC4IBqAvQlCszIaDLCm%2fghuHqRA%3d&risl=&pid=ImgRaw&r=0"></td></tr>
+					<tr class="mBg" id="perform"><td class="mIcon">猫咪鉴赏大赛</td></tr>
+					<tr><td>
+							<ul>
+								<li>CFA</li>
+								<li>TICA</li>
+								<li>FIFE</li>
+								<li>WCF</li>
+							</ul>
+						</td>
+					</tr>
+					<tr class="mBg" id="home"><td class="mIcon">猫咪的窝</td></tr>
+					<tr><td>
+							<ul>
+								<li>室外小猫舍</li>
+								<li>林中空心木</li>
+								<li>屋檐</li>
+								<li>木屋壁炉</li>
+								<li>地毯下</li>
+								<li>嘎吱作响的门后面</li>
+								<li>床底下</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" id="mBottom"><br/>
+				联系我们<span>1647877065@qq.com</span>
+			</td>
+		</tr>
+		<tr><td colspan="3" id="mBottom"><span><br/>Jinbo</span>的猫咪保护基地</id></tr>
+	</table>
+ </body>
+</html>
